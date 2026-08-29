@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>보관함 — 태그 한 번 툭</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="list">
+  <div class="wrap">
+    <header class="list-head">
+      <h1>보관함</h1>
+      <input type="search" class="search" id="search" placeholder="제목 검색" aria-label="제목 검색">
+      <button type="button" class="btn" id="manage">태그 관리</button>
+    </header>
+
+    <div class="filters" id="filters" role="group" aria-label="태그 필터"></div>
+
+    <p class="count-line num" id="count" aria-live="polite"></p>
+
+    <main class="cards" id="cards"></main>
+    <div class="sentinel" id="sentinel" aria-hidden="true"></div>
+  </div>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+    <div class="sheet-head">
+      <h2 id="sheet-title">태그 관리</h2>
+      <button type="button" class="icon-btn" id="sheet-close" aria-label="닫기">✕</button>
+    </div>
+    <div class="sheet-body" id="sheet-body"></div>
+    <p class="sheet-msg" id="sheet-msg" role="status"></p>
+  </dialog>
+
+  <script type="module" src="list.js"></script>
+</body>
+</html>
