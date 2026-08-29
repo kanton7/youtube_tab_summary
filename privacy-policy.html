@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 태그 한 번 툭</title>
+<meta name="description" content="크롬 확장 프로그램 '태그 한 번 툭'의 개인정보처리방침. 이 확장 프로그램은 어떤 정보도 수집하거나 전송하지 않습니다.">
+<meta name="robots" content="index, follow">
+<style>
+:root {
+  --bg:            #161A22;
+  --surface-1:     #1D222C;
+  --surface-2:     #242936;
+  --border:        #2A3040;
+  --border-strong: #39404F;
+  --text:          #E9ECF4;
+  --text-2:        #A0A7BA;
+  --text-3:        #79819A;
+  --accent:        #F0A830;
+  --accent-soft:   rgba(240, 168, 48, 0.14);
+  --accent-line:   rgba(240, 168, 48, 0.38);
+
+  --font: Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+          'Segoe UI', 'Malgun Gothic', 'Helvetica Neue', Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header { margin-bottom: 40px; }
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+
+.dates {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.summary {
+  margin: 32px 0 0;
+  padding: 18px 20px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.summary strong { font-weight: 500; }
+
+h2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 48px 0 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+h2:first-of-type { border-top: none; padding-top: 0; }
+
+h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 24px 0 8px;
+}
+
+p { margin: 0 0 16px; color: var(--text-2); }
+p.tight { margin-bottom: 8px; }
+strong { color: var(--text); font-weight: 500; }
+
+ul { margin: 0 0 16px; padding-left: 20px; color: var(--text-2); }
+li { margin-bottom: 6px; }
+
+code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--surface-2);
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: var(--text);
+}
+
+.table-scroll { overflow-x: auto; margin: 0 0 20px; }
+
+table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 16px 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding-bottom: 8px;
+}
+td { color: var(--text-2); line-height: 1.6; }
+td:first-child { color: var(--text); white-space: nowrap; }
+td.k { font-family: var(--mono); font-size: 13px; }
+tr:last-child td { border-bottom: none; }
+
+.lang-jump {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 7px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-2);
+  text-decoration: none;
+}
+.lang-jump:hover { border-color: var(--accent-line); color: var(--accent); }
+
+.divider {
+  margin: 72px 0 56px;
+  border: none;
+  border-top: 1px solid var(--border-strong);
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-3);
+}
+footer p { color: var(--text-3); margin-bottom: 6px; }
+
+@media (max-width: 480px) {
+  .wrap { padding: 40px 20px 64px; }
+  h1 { font-size: 24px; }
+  body { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <p class="kicker">Chrome Extension</p>
+    <h1>태그 한 번 툭 — 개인정보처리방침</h1>
+    <p class="dates">시행일 2026년 8월 29일 · 최종 수정일 2026년 8월 29일</p>
+    <a class="lang-jump" href="#english">Read in English</a>
+    <p class="summary">
+      <strong>요약.</strong> 이 확장 프로그램은 개발자나 제3자에게 어떠한 정보도 수집하거나
+      전송하지 않습니다. 사용자가 담은 영상 목록은 사용자의 브라우저 안에만 저장되며,
+      계정·로그인·서버가 없습니다.
+    </p>
+  </header>
+
+  <h2>1. 수집하는 정보</h2>
+  <p>
+    이 확장 프로그램은 개인정보를 포함한 <strong>어떠한 정보도 수집하지 않습니다.</strong>
+    개발자가 운영하는 서버가 없으며, 분석 도구나 광고 모듈을 포함하지 않습니다.
+    사용자의 데이터가 사용자의 기기를 떠나는 경로 자체가 존재하지 않습니다.
+  </p>
+
+  <h2>2. 기기에 저장되는 정보</h2>
+  <p>
+    사용자가 확장 프로그램 아이콘을 클릭하고 태그를 눌러 <strong>직접 담기를 실행한</strong>
+    유튜브 영상에 한해, 아래 정보가 사용자의 브라우저 안에 저장됩니다.
+  </p>
+
+  <h3>영상</h3>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>항목</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td class="k">id</td><td>유튜브 영상 고유 번호</td></tr>
+        <tr><td class="k">url</td><td>영상 주소</td></tr>
+        <tr><td class="k">title</td><td>영상 제목</td></tr>
+        <tr><td class="k">channel</td><td>채널명 (가져올 수 있는 경우에만, 없으면 빈 값)</td></tr>
+        <tr><td class="k">thumbnail</td><td>썸네일 이미지의 주소 (이미지 파일 자체는 저장하지 않음)</td></tr>
+        <tr><td class="k">tagIds</td><td>사용자가 붙인 태그의 번호</td></tr>
+        <tr><td class="k">savedAt</td><td>담은 시각</td></tr>
+        <tr><td class="k">source</td><td>담은 경로 (현재는 항상 “팝업”)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>태그</h3>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>항목</th><th>내용</th></tr></thead>
+      <tbody>
+        <tr><td class="k">id</td><td>태그 고유 번호</td></tr>
+        <tr><td class="k">name</td><td>사용자가 직접 입력한 태그 이름</td></tr>
+        <tr><td class="k">pinned</td><td>즐겨찾기 고정 여부</td></tr>
+        <tr><td class="k">useCount</td><td>사용 횟수 (팝업에서 태그를 정렬하는 데 사용)</td></tr>
+        <tr><td class="k">lastUsedAt</td><td>마지막으로 사용한 시각</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    사용자가 방문한 페이지의 기록, 검색어, 클릭이나 마우스 움직임 같은 활동 정보는
+    저장하지 않습니다. 사용자가 담기를 실행하지 않은 영상은 어떤 형태로도 기록되지 않습니다.
+  </p>
+
+  <h2>3. 저장 위치와 보관 기간</h2>
+  <p>
+    위 정보는 크롬이 확장 프로그램에 제공하는 로컬 저장 공간(<code>chrome.storage.local</code>)에
+    저장됩니다. 이 저장 공간은 사용자의 컴퓨터 안에 있으며, 개발자를 포함한 누구도 외부에서
+    열람할 수 없습니다.
+  </p>
+  <p>
+    사용자가 보관함에서 개별 영상을 삭제하면 그 기록은 즉시 사라집니다.
+    <strong>확장 프로그램을 삭제하면 저장된 모든 데이터가 함께 삭제됩니다.</strong>
+    별도의 보관 기간을 두지 않으며, 개발자가 백업을 보관하지 않습니다.
+  </p>
+
+  <h2>4. 외부로 나가는 통신</h2>
+  <p>
+    이 확장 프로그램은 개발자의 서버와 통신하지 않습니다. 외부로 나가는 요청은 아래 한 가지뿐입니다.
+  </p>
+  <ul>
+    <li>
+      <strong>썸네일 이미지 표시</strong> — 저장한 영상의 썸네일을 화면에 보여주기 위해
+      유튜브(<code>img.youtube.com</code>)에 이미지를 요청합니다. 이때 전송되는 것은 이미지
+      주소뿐이며, 사용자의 태그·저장 목록·개인정보는 포함되지 않습니다. 이 요청은 사용자가
+      팝업이나 보관함 화면을 열었을 때 브라우저가 일반적인 이미지 로딩과 동일하게 수행합니다.
+    </li>
+  </ul>
+  <p>
+    보관함에서 영상 카드를 클릭하면 새 탭에서 유튜브가 열립니다. 이는 일반적인 링크 이동이며,
+    확장 프로그램이 별도로 정보를 전송하는 것이 아닙니다.
+  </p>
+
+  <h2>5. 권한별 사용 목적</h2>
+  <p>
+    이 확장 프로그램은 아래 권한만 요청합니다. 특정 사이트에 상시 접근하는 호스트 권한
+    (<code>host_permissions</code>)은 요청하지 않으며, 항상 실행되는 콘텐츠 스크립트도
+    포함하지 않습니다.
+  </p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>권한</th><th>사용 목적</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="k">activeTab</td>
+          <td>사용자가 아이콘을 클릭한 그 순간의 탭에서 주소와 제목을 읽어 어떤 영상인지
+              확인합니다. 클릭하지 않으면 어떤 페이지에도 접근하지 않습니다.</td>
+        </tr>
+        <tr>
+          <td class="k">scripting</td>
+          <td>아이콘을 클릭한 순간, 해당 유튜브 페이지에서 채널명 한 줄만 읽어옵니다.
+              페이지를 변경하지 않으며, 채널명을 찾지 못하면 빈 값으로 두고 넘어갑니다.</td>
+        </tr>
+        <tr>
+          <td class="k">storage</td>
+          <td>담은 영상과 태그를 사용자의 브라우저에 저장합니다.</td>
+        </tr>
+        <tr>
+          <td class="k">unlimitedStorage</td>
+          <td>담은 영상이 많아졌을 때 기본 저장 한도에 막히지 않도록 합니다.</td>
+        </tr>
+        <tr>
+          <td class="k">contextMenus</td>
+          <td>확장 프로그램 아이콘의 우클릭 메뉴에 “보관함 열기” 항목 하나를 추가합니다.
+              웹페이지의 우클릭 메뉴는 변경하지 않습니다.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>6. 제3자 제공 · 판매</h2>
+  <p>
+    수집하는 정보가 없으므로 제3자에게 제공하거나 판매하는 정보도 없습니다.
+    데이터를 신용도 평가나 대출 목적으로 사용하지 않으며, 승인된 용도 외로 사용하지 않습니다.
+  </p>
+
+  <h2>7. 원격 코드</h2>
+  <p>
+    이 확장 프로그램은 <strong>원격 코드를 사용하지 않습니다.</strong> 모든 자바스크립트,
+    스타일시트, 글꼴, 아이콘이 패키지 안에 포함되어 있으며, 외부에서 코드를 내려받아
+    실행하지 않습니다.
+  </p>
+
+  <h2>8. 계정과 아동</h2>
+  <p>
+    회원가입, 로그인, 기기 간 동기화 기능이 없습니다. 사용자를 식별하지 않으므로 연령 정보를
+    포함한 어떠한 개인정보도 수집하지 않으며, 아동을 대상으로 정보를 수집하는 기능이 없습니다.
+  </p>
+
+  <h2>9. 방침 변경</h2>
+  <p>
+    이 방침이 변경되면 이 페이지를 갱신하고 위의 최종 수정일을 바꿉니다.
+    데이터 처리 방식에 실질적인 변화가 생기는 경우 확장 프로그램 업데이트 설명에도 함께 안내합니다.
+  </p>
+
+  <h2>10. 문의</h2>
+  <p>
+    이 방침이나 데이터 처리에 대해 궁금한 점이 있으면 아래로 연락 주세요.<br>
+    <a href="mailto:kanton7@gmail.com">kanton7@gmail.com</a>
+  </p>
+
+  <hr class="divider">
+
+  <header id="english">
+    <p class="kicker">Chrome Extension</p>
+    <h1>Privacy Policy — Tag Han Beon Tuk</h1>
+    <p class="dates">Effective August 29, 2026 · Last updated August 29, 2026</p>
+    <p class="summary">
+      <strong>Summary.</strong> This extension does not collect or transmit any information
+      to the developer or any third party. Everything a user saves is stored only in the
+      user's own browser. There are no accounts, no logins, and no servers.
+    </p>
+  </header>
+
+  <h2>1. Information We Collect</h2>
+  <p>
+    This extension <strong>collects no information of any kind</strong>, personal or otherwise.
+    The developer operates no server, and the extension contains no analytics or advertising
+    code. There is no mechanism by which user data can leave the user's device.
+  </p>
+
+  <h2>2. Information Stored on Your Device</h2>
+  <p>
+    Only for YouTube videos that the user <strong>explicitly saves</strong> — by clicking the
+    extension icon and then clicking a tag — the following is stored inside the user's browser:
+  </p>
+  <ul>
+    <li><strong>Video</strong> — video ID, URL, title, channel name (when available),
+        thumbnail URL (not the image file itself), the tags applied by the user, the time it
+        was saved, and the save source.</li>
+    <li><strong>Tag</strong> — tag ID, the name the user typed, whether it is pinned,
+        a use count, and the time it was last used. The use count is used only to order tags
+        in the popup.</li>
+  </ul>
+  <p>
+    Browsing history, search terms, and activity such as clicks or mouse movement are not
+    stored. Videos the user did not explicitly save are never recorded.
+  </p>
+
+  <h2>3. Where It Is Stored and For How Long</h2>
+  <p>
+    This data is stored in the local storage area Chrome provides to extensions
+    (<code>chrome.storage.local</code>), which resides on the user's own computer. Nobody,
+    including the developer, can read it remotely.
+  </p>
+  <p>
+    Deleting a video in the library removes its record immediately.
+    <strong>Uninstalling the extension deletes all stored data.</strong> No retention period
+    applies and the developer keeps no backups.
+  </p>
+
+  <h2>4. Outbound Network Requests</h2>
+  <p>
+    The extension never contacts a developer-operated server. There is exactly one outbound
+    request:
+  </p>
+  <ul>
+    <li>
+      <strong>Thumbnail images</strong> — to display the thumbnail of a saved video, the
+      browser requests an image from YouTube (<code>img.youtube.com</code>). Only the image
+      URL is sent; no tags, saved list, or personal data is included. This happens the same
+      way any ordinary image on a web page loads.
+    </li>
+  </ul>
+  <p>
+    Clicking a card in the library opens YouTube in a new tab. That is ordinary link
+    navigation, not a transmission of data by the extension.
+  </p>
+
+  <h2>5. Permissions and Why They Are Needed</h2>
+  <p>
+    The extension requests only the permissions below. It requests no broad host permissions
+    (<code>host_permissions</code>) and registers no persistent content scripts.
+  </p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="k">activeTab</td>
+          <td>Reads the URL and title of the active tab at the moment the user clicks the
+              extension icon, to identify which video is being saved. Without a click, no page
+              is accessed.</td>
+        </tr>
+        <tr>
+          <td class="k">scripting</td>
+          <td>On that same click, reads only the channel name from the YouTube page. It does
+              not modify the page, and proceeds with an empty value if the name is not found.</td>
+        </tr>
+        <tr>
+          <td class="k">storage</td>
+          <td>Stores saved videos and tags in the user's browser.</td>
+        </tr>
+        <tr>
+          <td class="k">unlimitedStorage</td>
+          <td>Prevents the default storage quota from blocking saves once many videos have
+              accumulated.</td>
+        </tr>
+        <tr>
+          <td class="k">contextMenus</td>
+          <td>Adds a single “Open library” item to the right-click menu of the extension icon.
+              It does not alter the right-click menu of web pages.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>6. Sharing and Sale of Data</h2>
+  <p>
+    Because no data is collected, none is shared with or sold to third parties. Data is not
+    used for creditworthiness or lending purposes, and is not used for any purpose beyond the
+    single purpose described in the store listing.
+  </p>
+
+  <h2>7. Remote Code</h2>
+  <p>
+    This extension <strong>does not use remote code.</strong> All JavaScript, stylesheets,
+    fonts, and icons are bundled in the package. Nothing is downloaded and executed at runtime.
+  </p>
+
+  <h2>8. Accounts and Children</h2>
+  <p>
+    There is no sign-up, login, or cross-device synchronization. The extension does not
+    identify users and collects no personal information, including age, and has no feature
+    that collects information from children.
+  </p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>
+    If this policy changes, this page will be updated and the “last updated” date above will
+    change. Any material change to how data is handled will also be noted in the extension's
+    update description.
+  </p>
+
+  <h2>10. Contact</h2>
+  <p>
+    Questions about this policy or about data handling:<br>
+    <a href="mailto:kanton7@gmail.com">kanton7@gmail.com</a>
+  </p>
+
+  <footer>
+    <p>태그 한 번 툭 · 유튜브 영상 서랍 · Chrome Extension</p>
+    <p>이 페이지는 크롬 웹스토어에 제출하는 개인정보처리방침입니다.</p>
+  </footer>
+
+</main>
+</body>
+</html>
